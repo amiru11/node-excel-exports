@@ -1,0 +1,99 @@
+{
+  "name": "express-sequelize-boilerplate",
+  "version": "1.0.0",
+  "description": "Express + Sequelize with Async/Await ",
+  "repository": "https://github.com/edkimco/express-sequelize-boilerplate",
+  "author": {
+    "name": "Hoony",
+    "email": "hoonch3@gmail.com",
+    "url": "https://medium.com/@the6thm0nth"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier --no-semi --single-quote --write --prose-wrap never",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "start": "gulp",
+    "dev": "nodemon src/index.js --exec \"node -r dotenv/config -r babel-register\"",
+    "clean": "rimraf dist",
+    "build": "npm run clean && mkdir -p dist && babel src -D -d dist",
+    "test": "jest --watch --coverage"
+  },
+  "keywords": [
+    "express",
+    "sequelize",
+    "babel",
+    "boilerplate",
+    "scaffold",
+    "es6",
+    "es2015",
+    "es2016",
+    "es2017",
+    "jest",
+    "prettier"
+  ],
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^20.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.4.0",
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.17.1",
+    "connect-flash": "^0.1.1",
+    "cors": "^2.8.4",
+    "crypto": "^1.0.1",
+    "debug": "^3.1.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-nodemon": "^2.2.1",
+    "jest": "^21.2.1",
+    "jsonwebtoken": "^7.4.2",
+    "mongoose": "^4.11.5",
+    "morgan": "^1.7.0",
+    "mysql2": "^1.4.1",
+    "nodemon": "^1.11.0",
+    "nyc": "^11.3.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "pug": "^2.0.0-beta11",
+    "raven": "^2.4.2",
+    "rimraf": "^2.6.1",
+    "sequelize": "^4.4.2",
+    "supertest": "^3.0.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/routes/**/*.js"
+    ]
+  },
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^3.1.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "prettier": "1.11.1"
+  }
+}

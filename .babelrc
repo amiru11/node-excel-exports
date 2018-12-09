@@ -1,0 +1,12 @@
+{
+  "presets": ["env"],
+  "plugins": [
+    "transform-regenerator", 
+    "transform-object-rest-spread",
+    ["module-resolver", {
+      "alias": {
+        "~": "./src"
+      }
+    }]
+  ]
+}
