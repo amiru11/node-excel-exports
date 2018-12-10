@@ -10,4 +10,9 @@ const router = Router()
 
 router.use('/v1.0', router_v_1_0)
 
+router.get('/test', (req, res) => {
+  console.log('/')
+  res.render('test')
+})
+
 export default router

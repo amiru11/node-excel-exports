@@ -61,6 +61,7 @@
     "mongoose": "^4.11.5",
     "morgan": "^1.7.0",
     "mysql2": "^1.4.1",
+    "node-excel-export": "^1.4.4",
     "nodemon": "^1.11.0",
     "nyc": "^11.3.0",
     "passport": "^0.3.2",

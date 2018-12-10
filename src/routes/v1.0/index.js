@@ -33,6 +33,7 @@ router.post('/login', auth.login)
  * POSTS
  */
 router.get('/posts', paginate, posts.get)
+router.get('/excel', posts.exportExcel)
 router.post('/posts', posts.post)
 router.put('/posts/:id', posts.put)
 router.delete('/posts/:id', posts.remove)
